@@ -22,6 +22,7 @@ const run = async () => {
       // Q to quit, H for help
       const processedCommands = processCommands(commands)
 
+      robot.translateCommandsToActions(processedCommands, warehouse)
     } catch (e) {
       // TODO: Future improvement, create a specific error class for user errors. 
       // Due to time constraints, I have deprioritized it.
