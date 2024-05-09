@@ -2,9 +2,19 @@ import { OUT_OF_BOUNDS } from "../../src/errors";
 import { CENTER_COORD } from "../../src/constants";
 import { Robot } from "../../src/services/robot";
 import { Warehouse } from "../../src/services/warehouse";
+import * as getRandomWarehousePositionUtils from "../../src/utils/getRandomWarehousePosition";
 
 
 describe("Services: robot", () => {
+
+  beforeEach(() => {
+    // Mock to return centre of Warehouse
+    jest.spyOn(getRandomWarehousePositionUtils, "getRandomWarehousePosition").mockReturnValue([CENTER_COORD, CENTER_COORD])
+  })
+
+  afterEach(() => {
+    jest.clearAllMocks()
+  })
 
   describe("translateCommandsToActions", () => {
 
