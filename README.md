@@ -1,5 +1,15 @@
 ## lyka-technical-assessment
 
+Hi! This is my submission for the Lyka Technical Assessment. 
+
+I have decided on an Object Oriented Approach where I have modelled the Warehouse and Robot as separate services.
+
+I have also applied TDD, which helped me with understanding the inputs and outputs I would be working with for these services.
+
+Due to time constraints, I prioritised the main functionality and testing. This meant I de-prioritised other areas such as
+
+* A better error object -> I had decided it would be faster to use a simple string to throw errors.
+* A better user interface (i.e allowing the user to quit with the command Q or look for instructions with the command H) -> The reason I didn't implement this was because the instructions are in this README and the user can quit with CTRL + C. However, given more time, this is something that would provide a huge quality of life to the user.
 
 ### Installation Instructions
 
