@@ -2,6 +2,7 @@
 
 import { Robot } from "./services/robot";
 import { Warehouse } from "./services/warehouse";
+import { requestCommands, processCommands } from "./utils/commands";
 
 const run = async () => {
   // Create a new Robot. It doesn't have a position or warehouse assigned yet.
@@ -12,6 +13,25 @@ const run = async () => {
 
   warehouse.printWarehouse()
 
+  while (true) {
+
+    try {
+      const commands = await requestCommands("Please input commands for the robot: ");
+
+      // TODO future improvement: create nicer commandline prompt at the beginning with additional commands such as
+      // Q to quit, H for help
+      const processedCommands = processCommands(commands)
+
+    } catch (e) {
+      // TODO: Future improvement, create a specific error class for user errors. 
+      // Due to time constraints, I have deprioritized it.
+      console.log(e)
+      continue
+    }
+
+    warehouse.printWarehouse()
+
+  }
   
 }
 
