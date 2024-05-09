@@ -37,6 +37,8 @@ simply run
 
 A 2D Grid will popup on your terminal and you will be asked to enter commands to move a robot.
 
+The robot looks like "o" and empty spaces look like "-"
+
 To move the robot enter commands "N E S W" without the quotemarks. 
 
 The input must be single-space separated. You cannot write "NESW". It must also be capital letters.
