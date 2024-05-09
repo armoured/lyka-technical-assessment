@@ -6,11 +6,13 @@
 install nvm for managing node versions
 
 `nvm install 21`
+
 `nvm use 21`
 
 check your node and npm versions
 
 `node -v` (should say v21.7.3)
+
 `npm -v` (should say 10.5.0)
 
 next run 
@@ -32,9 +34,13 @@ The input must be single-space separated. You cannot write "NESW". It must also 
 You cannot have multiple spaces between instructions. I.e. "N    E" does not work. It must be "N E"
 
 N means "North", which moves the robot up
+
 E means "East", which moves the robot right
+
 S means "South", which moves the robot down
+
 W means "West", which moves the robot left
+
 
 To exit the program, simply run CTRL + C (or CMD + C depending on your operating system)
 
